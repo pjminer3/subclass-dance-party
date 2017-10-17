@@ -2,7 +2,7 @@
 var MakeDancer = function(top, left, timeBetweenSteps) {
 
   if (this.char === 'morty') {
-    this.$node = $('<div class="' + this.char + '"><img class="mortyImg" src="img/morty1.png"></div>');
+    this.$node = $('<div class="' + this.char + '"><img src="img/morty1.png"></div>');
     // this.$pic = $('<img class="mortyImg" src="../img/morty1.png">');
   } else if (this.char === 'rick') {
     this.$node = $('<div class="' + this.char + '"><img class="rickImg" src="img/rick1.png"></div>');
