@@ -31,21 +31,37 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 .morty{
-  border:10px solid yellow;
+  height:150px;
+  width:150px;
   border-radius:10px;
   position:absolute;
 }
-.summer{
-  border:10px solid pink;
-  border-radius:10px;
-  position:absolute;
+.morty img{
+  height:100%;
+  width:auto;
 }
 .rick{
-  border:10px solid green;
+  height:200px;
+  width:200px;
   border-radius:10px;
   position:absolute;
+}
+.rick img{
+  height:100%;
+  width:auto;
+}
+.summer{
+  height:180px;
+  width:180px;
+  border-radius:10px;
+  position:absolute;
+}
+.summer img{
+  height:100%;
+  width:auto;
 }
 .background img {
   height: auto;
   width: 100%;
 }
+

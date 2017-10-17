@@ -2,11 +2,12 @@
 var MakeDancer = function(top, left, timeBetweenSteps) {
 
   if (this.char === 'morty') {
-    this.$node = $('<span class="' + this.char + '"></span>');
+    this.$node = $('<div class="' + this.char + '"><img class="mortyImg" src="img/morty1.png"></div>');
+    // this.$pic = $('<img class="mortyImg" src="../img/morty1.png">');
   } else if (this.char === 'rick') {
-    this.$node = $('<span class="' + this.char + '"></span>');
+    this.$node = $('<div class="' + this.char + '"><img class="rickImg" src="img/rick1.png"></div>');
   } else if (this.char === 'summer') {
-    this.$node = $('<span class="' + this.char + '"></span>');
+    this.$node = $('<div class="' + this.char + '"><img class="summerImg" src="img/summer1.png"></div>');
   } else {
     this.$node = $('<span class="dancer"></span>');
   } 
