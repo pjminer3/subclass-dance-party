@@ -1,4 +1,5 @@
-var MakeBlinkyDancer = function(top, left, timeBetweenSteps) {
+var MakeSummerDancer = function(top, left, timeBetweenSteps) {
+  this.char = 'summer';
 
   // var blinkyDancer = new makeDancer(top, left, timeBetweenSteps);
   MakeDancer.call(this, top, left, timeBetweenSteps);
@@ -13,10 +14,10 @@ var MakeBlinkyDancer = function(top, left, timeBetweenSteps) {
 
 };
 
-MakeBlinkyDancer.prototype = Object.create(MakeDancer.prototype);
-MakeBlinkyDancer.prototype.constructor = MakeBlinkyDancer;
+MakeSummerDancer.prototype = Object.create(MakeDancer.prototype);
+MakeSummerDancer.prototype.constructor = MakeSummerDancer;
 
-MakeBlinkyDancer.prototype.step = function() {
+MakeSummerDancer.prototype.step = function() {
   // call the old version of step at the beginning of any call to this new version of step
   // console.log('test');
   MakeDancer.prototype.step.call(this);
