@@ -2,7 +2,11 @@ $(document).ready(function() {
   window.dancers = [];
   
   $('.addLineupButton').on('click', function(event) {
-    $(".morty").attr("top", 0);
+    console.log('Button was clicked');
+    for (var i = 0; i < window.dancers.length; i++) {
+      console.log('Loop was triggered');
+      window.dancers[i].setPosition(500, ($("body").width()/(window.dancers.length + 1)) * (i + 1));
+    }
   });
 
   $('.addDancerButton').on('click', function(event) {
@@ -32,6 +36,7 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+    window.dancers.push(dancer);
   });
 });
 
