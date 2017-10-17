@@ -1,5 +1,9 @@
 $(document).ready(function() {
   window.dancers = [];
+  
+  $('.addLineupButton').on('click', function(event) {
+    $(".morty").attr("top", 0);
+  });
 
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
