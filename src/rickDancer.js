@@ -28,3 +28,7 @@ MakeRickDancer.prototype.step = function() {
   // this.$node.toggle();
   this.$node.toggleClass("danceMove");
 };
+
+MakeRickDancer.prototype.lineup = function() {
+  this.setPosition($('body').height() - 200, this.left);
+}

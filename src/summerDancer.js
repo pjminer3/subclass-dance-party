@@ -28,3 +28,7 @@ MakeSummerDancer.prototype.step = function() {
   // this.$node.toggle();
   this.$node.toggleClass("danceMove");
 };
+
+MakeSummerDancer.prototype.lineup = function() {
+  this.setPosition($('body').height() - 200, this.left);
+};

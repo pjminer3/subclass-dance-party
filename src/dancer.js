@@ -1,6 +1,9 @@
 // Creates and returns a new dancer object that can step
 var MakeDancer = function(top, left, timeBetweenSteps) {
 
+  this.top = top;
+  this.left = left;
+
   if (this.char === 'morty') {
     this.$node = $('<div class="' + this.char + '"><img src="img/morty1.png"></div>');
     // this.$pic = $('<img class="mortyImg" src="../img/morty1.png">');
@@ -34,4 +37,11 @@ MakeDancer.prototype.setPosition = function(top, left) {
     left: left
   };
   this.$node.css(styleSettings);
+};
+
+MakeDancer.prototype.moveToPortal = function() {
+  // Use css top and left properties to position our <span> tag
+  // where it belongs on the page. See http://api.jquery.com/css/
+  //
+  this.setPosition($('body').height() - 200, Math.max(this.left/3, 150 - this.left/10));
 };

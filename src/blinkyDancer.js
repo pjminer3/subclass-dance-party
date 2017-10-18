@@ -1,5 +1,6 @@
 var MakeBlinkyDancer = function(top, left, timeBetweenSteps) {
 
+  this.char = 'blinky';
   // var blinkyDancer = new makeDancer(top, left, timeBetweenSteps);
   MakeDancer.call(this, top, left, timeBetweenSteps);
 

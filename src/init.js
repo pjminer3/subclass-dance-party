@@ -2,12 +2,18 @@ $(document).ready(function() {
   window.dancers = [];
   
   $('.addLineupButton').on('click', function(event) {
-    console.log('Button was clicked');
     for (var i = 0; i < window.dancers.length; i++) {
-      console.log('Loop was triggered');
-      window.dancers[i].setPosition(500, ($("body").width()/(window.dancers.length + 1)) * (i + 1));
+      // window.dancers[i].setPosition(500, ($("body").width()/(window.dancers.length + 1)) * (i + 1));
+      window.dancers[i].lineup();
     }
   });
+
+  // MAKES MORTY JUMP 100PX WHENEVER HE IS CLICKED
+  $('body').on('click', '.morty', function() {
+    $(this).animate({top: '-=100px'});
+    $(this).animate({top: '+=100px'});
+  });
+
 
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
@@ -31,12 +37,18 @@ $(document).ready(function() {
     // make a dancer with a random position
 
     var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
+      Math.min($("body").height() * Math.random(), 550),
       $("body").width() * Math.random(),
-      Math.random() * 1000
+      Math.max(Math.random() * 1000, 300)
     );
     $('body').append(dancer.$node);
     window.dancers.push(dancer);
+
+    $('.dancer').on('click', function(event) {
+      console.log('Element was clicked');
+      $(this).toggleClass("test");
+    });
+
   });
 });
 
